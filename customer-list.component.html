@@ -1,0 +1,23 @@
+<h2>Customer List</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <!-- <th>Id:</th>      -->
+<th>Name:</th>
+<th>Address:</th>
+<th>Email:</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let customer of customers">
+<td>{{customer.name}}</td>
+<td>{{customer.address}}</td>
+<td>{{customer.email}}</td>
+<td><button (click)="updateCustomer(customer.id)" class="btn btn-info">
+    Update</button></td>
+ <td><button (click)="deleteCustomer(customer.id)" class="btn btn-danger">
+    Delete</button></td>
+</tr>
+</tbody>
+</table>
